@@ -1,0 +1,24 @@
+{
+  "Solver": "clingo version 5.7.2",
+  "Input": [
+    "./asp/instances/bike/bike-2.lp","./asp/bike-encoding.lp"
+  ],
+  "Call": [
+    {
+
+    }
+  ],
+  "Result": "UNSATISFIABLE",
+  "Models": {
+    "Number": 0,
+    "More": "no"
+  },
+  "Calls": 1,
+  "Time": {
+    "Total": 0.093,
+    "Solve": 0.000,
+    "Model": 0.000,
+    "Unsat": 0.000,
+    "CPU": 0.092
+  }
+}

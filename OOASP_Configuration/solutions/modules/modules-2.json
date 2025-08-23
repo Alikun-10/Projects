@@ -1,0 +1,198 @@
+{
+  "Solver": "clingo version 5.7.2",
+  "Input": [
+    "./asp/instances/modules/modules-2.lp","./asp/modules-encoding.lp"
+  ],
+  "Call": [
+    {
+      "Witnesses": [
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"inst\")", "ooasp_isa(\"inst\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"inst\",\"ModuleA\",(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ModuleB\",(\"ModuleB\",3))", "ooasp_isa(\"inst\",\"ElementA\",(\"ElementA\",4))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ElementB\",(\"ElementB\",1))", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleA\",2),3)", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleB\",3),5)", "ooasp_associated(\"inst\",\"ElementA_moduleA\",(\"ElementA\",4),(\"ModuleA\",2))", "ooasp_associated(\"inst\",\"ElementB_moduleB\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementA\",4),(\"ModuleA\",2))"
+          ],
+          "Costs": [
+            5
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"inst\")", "ooasp_isa(\"inst\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"inst\",\"ModuleA\",(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ModuleB\",(\"ModuleB\",3))", "ooasp_isa(\"inst\",\"ElementA\",(\"ElementA\",4))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ElementB\",(\"ElementB\",1))", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleA\",2),3)", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleB\",3),1)", "ooasp_associated(\"inst\",\"ElementA_moduleA\",(\"ElementA\",4),(\"ModuleA\",2))", "ooasp_associated(\"inst\",\"ElementB_moduleB\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementA\",4),(\"ModuleA\",2))"
+          ],
+          "Costs": [
+            5
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"inst\")", "ooasp_isa(\"inst\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"inst\",\"ModuleA\",(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ModuleB\",(\"ModuleB\",3))", "ooasp_isa(\"inst\",\"ElementA\",(\"ElementA\",4))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ElementB\",(\"ElementB\",1))", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleA\",2),2)", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleB\",3),3)", "ooasp_associated(\"inst\",\"ElementA_moduleA\",(\"ElementA\",4),(\"ModuleA\",2))", "ooasp_associated(\"inst\",\"ElementB_moduleB\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementA\",4),(\"ModuleA\",2))"
+          ],
+          "Costs": [
+            5
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"inst\")", "ooasp_isa(\"inst\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"inst\",\"ModuleA\",(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ModuleB\",(\"ModuleB\",3))", "ooasp_isa(\"inst\",\"ElementA\",(\"ElementA\",4))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ElementB\",(\"ElementB\",1))", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleA\",2),2)", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleB\",3),1)", "ooasp_associated(\"inst\",\"ElementA_moduleA\",(\"ElementA\",4),(\"ModuleA\",2))", "ooasp_associated(\"inst\",\"ElementB_moduleB\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementA\",4),(\"ModuleA\",2))"
+          ],
+          "Costs": [
+            5
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"inst\")", "ooasp_isa(\"inst\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"inst\",\"ModuleA\",(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ModuleB\",(\"ModuleB\",3))", "ooasp_isa(\"inst\",\"ElementA\",(\"ElementA\",4))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ElementB\",(\"ElementB\",1))", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleA\",2),5)", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleB\",3),3)", "ooasp_associated(\"inst\",\"ElementA_moduleA\",(\"ElementA\",4),(\"ModuleA\",2))", "ooasp_associated(\"inst\",\"ElementB_moduleB\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementA\",4),(\"ModuleA\",2))"
+          ],
+          "Costs": [
+            5
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"inst\")", "ooasp_isa(\"inst\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"inst\",\"ModuleA\",(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ModuleB\",(\"ModuleB\",3))", "ooasp_isa(\"inst\",\"ElementA\",(\"ElementA\",4))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ElementB\",(\"ElementB\",1))", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleA\",2),5)", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleB\",3),1)", "ooasp_associated(\"inst\",\"ElementA_moduleA\",(\"ElementA\",4),(\"ModuleA\",2))", "ooasp_associated(\"inst\",\"ElementB_moduleB\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementA\",4),(\"ModuleA\",2))"
+          ],
+          "Costs": [
+            5
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"inst\")", "ooasp_isa(\"inst\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"inst\",\"ModuleA\",(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ModuleB\",(\"ModuleB\",3))", "ooasp_isa(\"inst\",\"ElementA\",(\"ElementA\",4))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ElementB\",(\"ElementB\",1))", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleA\",2),1)", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleB\",3),3)", "ooasp_associated(\"inst\",\"ElementA_moduleA\",(\"ElementA\",4),(\"ModuleA\",2))", "ooasp_associated(\"inst\",\"ElementB_moduleB\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementA\",4),(\"ModuleA\",2))"
+          ],
+          "Costs": [
+            5
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"inst\")", "ooasp_isa(\"inst\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"inst\",\"ModuleA\",(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ModuleB\",(\"ModuleB\",3))", "ooasp_isa(\"inst\",\"ElementA\",(\"ElementA\",4))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ElementB\",(\"ElementB\",1))", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleA\",2),3)", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleB\",3),2)", "ooasp_associated(\"inst\",\"ElementA_moduleA\",(\"ElementA\",4),(\"ModuleA\",2))", "ooasp_associated(\"inst\",\"ElementB_moduleB\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementA\",4),(\"ModuleA\",2))"
+          ],
+          "Costs": [
+            5
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"inst\")", "ooasp_isa(\"inst\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"inst\",\"ModuleA\",(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ModuleB\",(\"ModuleB\",3))", "ooasp_isa(\"inst\",\"ElementA\",(\"ElementA\",4))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ElementB\",(\"ElementB\",1))", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleA\",2),1)", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleB\",3),2)", "ooasp_associated(\"inst\",\"ElementA_moduleA\",(\"ElementA\",4),(\"ModuleA\",2))", "ooasp_associated(\"inst\",\"ElementB_moduleB\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementA\",4),(\"ModuleA\",2))"
+          ],
+          "Costs": [
+            5
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"inst\")", "ooasp_isa(\"inst\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"inst\",\"ModuleA\",(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ModuleB\",(\"ModuleB\",3))", "ooasp_isa(\"inst\",\"ElementA\",(\"ElementA\",4))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ElementB\",(\"ElementB\",1))", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleA\",2),5)", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleB\",3),2)", "ooasp_associated(\"inst\",\"ElementA_moduleA\",(\"ElementA\",4),(\"ModuleA\",2))", "ooasp_associated(\"inst\",\"ElementB_moduleB\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementA\",4),(\"ModuleA\",2))"
+          ],
+          "Costs": [
+            5
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"inst\")", "ooasp_isa(\"inst\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"inst\",\"ModuleA\",(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ModuleB\",(\"ModuleB\",3))", "ooasp_isa(\"inst\",\"ElementA\",(\"ElementA\",4))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ElementB\",(\"ElementB\",1))", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleA\",2),3)", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleB\",3),4)", "ooasp_associated(\"inst\",\"ElementA_moduleA\",(\"ElementA\",4),(\"ModuleA\",2))", "ooasp_associated(\"inst\",\"ElementB_moduleB\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementA\",4),(\"ModuleA\",2))"
+          ],
+          "Costs": [
+            5
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"inst\")", "ooasp_isa(\"inst\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"inst\",\"ModuleA\",(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ModuleB\",(\"ModuleB\",3))", "ooasp_isa(\"inst\",\"ElementA\",(\"ElementA\",4))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ElementB\",(\"ElementB\",1))", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleA\",2),2)", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleB\",3),4)", "ooasp_associated(\"inst\",\"ElementA_moduleA\",(\"ElementA\",4),(\"ModuleA\",2))", "ooasp_associated(\"inst\",\"ElementB_moduleB\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementA\",4),(\"ModuleA\",2))"
+          ],
+          "Costs": [
+            5
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"inst\")", "ooasp_isa(\"inst\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"inst\",\"ModuleA\",(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ModuleB\",(\"ModuleB\",3))", "ooasp_isa(\"inst\",\"ElementA\",(\"ElementA\",4))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ElementB\",(\"ElementB\",1))", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleA\",2),5)", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleB\",3),4)", "ooasp_associated(\"inst\",\"ElementA_moduleA\",(\"ElementA\",4),(\"ModuleA\",2))", "ooasp_associated(\"inst\",\"ElementB_moduleB\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementA\",4),(\"ModuleA\",2))"
+          ],
+          "Costs": [
+            5
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"inst\")", "ooasp_isa(\"inst\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"inst\",\"ModuleA\",(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ModuleB\",(\"ModuleB\",3))", "ooasp_isa(\"inst\",\"ElementA\",(\"ElementA\",4))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ElementB\",(\"ElementB\",1))", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleA\",2),1)", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleB\",3),4)", "ooasp_associated(\"inst\",\"ElementA_moduleA\",(\"ElementA\",4),(\"ModuleA\",2))", "ooasp_associated(\"inst\",\"ElementB_moduleB\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementA\",4),(\"ModuleA\",2))"
+          ],
+          "Costs": [
+            5
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"inst\")", "ooasp_isa(\"inst\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"inst\",\"ModuleA\",(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ModuleB\",(\"ModuleB\",3))", "ooasp_isa(\"inst\",\"ElementA\",(\"ElementA\",4))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ElementB\",(\"ElementB\",1))", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleA\",2),3)", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleB\",3),5)", "ooasp_associated(\"inst\",\"ElementA_moduleA\",(\"ElementA\",4),(\"ModuleA\",2))", "ooasp_associated(\"inst\",\"ElementB_moduleB\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementA\",4),(\"ModuleA\",2))"
+          ],
+          "Costs": [
+            5
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"inst\")", "ooasp_isa(\"inst\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"inst\",\"ModuleA\",(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ModuleB\",(\"ModuleB\",3))", "ooasp_isa(\"inst\",\"ElementA\",(\"ElementA\",4))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ElementB\",(\"ElementB\",1))", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleA\",2),1)", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleB\",3),5)", "ooasp_associated(\"inst\",\"ElementA_moduleA\",(\"ElementA\",4),(\"ModuleA\",2))", "ooasp_associated(\"inst\",\"ElementB_moduleB\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementA\",4),(\"ModuleA\",2))"
+          ],
+          "Costs": [
+            5
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"inst\")", "ooasp_isa(\"inst\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"inst\",\"ModuleA\",(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ModuleB\",(\"ModuleB\",3))", "ooasp_isa(\"inst\",\"ElementA\",(\"ElementA\",4))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ElementB\",(\"ElementB\",1))", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleA\",2),2)", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleB\",3),5)", "ooasp_associated(\"inst\",\"ElementA_moduleA\",(\"ElementA\",4),(\"ModuleA\",2))", "ooasp_associated(\"inst\",\"ElementB_moduleB\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementA\",4),(\"ModuleA\",2))"
+          ],
+          "Costs": [
+            5
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"inst\")", "ooasp_isa(\"inst\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"inst\",\"ModuleA\",(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ModuleB\",(\"ModuleB\",3))", "ooasp_isa(\"inst\",\"ElementA\",(\"ElementA\",4))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ElementB\",(\"ElementB\",1))", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleA\",2),4)", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleB\",3),3)", "ooasp_associated(\"inst\",\"ElementA_moduleA\",(\"ElementA\",4),(\"ModuleA\",2))", "ooasp_associated(\"inst\",\"ElementB_moduleB\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementA\",4),(\"ModuleA\",2))"
+          ],
+          "Costs": [
+            5
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"inst\")", "ooasp_isa(\"inst\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"inst\",\"ModuleA\",(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ModuleB\",(\"ModuleB\",3))", "ooasp_isa(\"inst\",\"ElementA\",(\"ElementA\",4))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ElementB\",(\"ElementB\",1))", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleA\",2),4)", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleB\",3),2)", "ooasp_associated(\"inst\",\"ElementA_moduleA\",(\"ElementA\",4),(\"ModuleA\",2))", "ooasp_associated(\"inst\",\"ElementB_moduleB\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementA\",4),(\"ModuleA\",2))"
+          ],
+          "Costs": [
+            5
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"inst\")", "ooasp_isa(\"inst\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"inst\",\"ModuleA\",(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ModuleB\",(\"ModuleB\",3))", "ooasp_isa(\"inst\",\"ElementA\",(\"ElementA\",4))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ElementB\",(\"ElementB\",1))", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleA\",2),4)", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleB\",3),1)", "ooasp_associated(\"inst\",\"ElementA_moduleA\",(\"ElementA\",4),(\"ModuleA\",2))", "ooasp_associated(\"inst\",\"ElementB_moduleB\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementA\",4),(\"ModuleA\",2))"
+          ],
+          "Costs": [
+            5
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"inst\")", "ooasp_isa(\"inst\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"inst\",\"ModuleA\",(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ModuleB\",(\"ModuleB\",3))", "ooasp_isa(\"inst\",\"ElementA\",(\"ElementA\",4))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleA\",2))", "ooasp_isa(\"inst\",\"ElementB\",(\"ElementB\",1))", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleA\",2),4)", "ooasp_attribute_value(\"inst\",\"position\",(\"ModuleB\",3),5)", "ooasp_associated(\"inst\",\"ElementA_moduleA\",(\"ElementA\",4),(\"ModuleA\",2))", "ooasp_associated(\"inst\",\"ElementB_moduleB\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Frame_modules\",(\"Frame\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementB\",1),(\"ModuleB\",3))", "ooasp_associated(\"inst\",\"Element_module\",(\"ElementA\",4),(\"ModuleA\",2))"
+          ],
+          "Costs": [
+            5
+          ]
+        }
+      ]
+    }
+  ],
+  "Result": "OPTIMUM FOUND",
+  "Models": {
+    "Number": 21,
+    "More": "no",
+    "Optimum": "yes",
+    "Optimal": 20,
+    "Costs": [
+      5
+    ]
+  },
+  "Calls": 1,
+  "Time": {
+    "Total": 0.459,
+    "Solve": 0.002,
+    "Model": 0.001,
+    "Unsat": 0.000,
+    "CPU": 0.455
+  }
+}

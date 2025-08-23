@@ -1,0 +1,24 @@
+{
+  "Solver": "clingo version 5.7.2",
+  "Input": [
+    "./asp/instances/modules/modules-7.lp","./asp/modules-encoding.lp"
+  ],
+  "Call": [
+    {
+
+    }
+  ],
+  "Result": "UNSATISFIABLE",
+  "Models": {
+    "Number": 0,
+    "More": "no"
+  },
+  "Calls": 1,
+  "Time": {
+    "Total": 0.226,
+    "Solve": 0.000,
+    "Model": 0.000,
+    "Unsat": 0.000,
+    "CPU": 0.224
+  }
+}

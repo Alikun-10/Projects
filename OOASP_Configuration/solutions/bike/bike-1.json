@@ -1,0 +1,174 @@
+{
+  "Solver": "clingo version 5.7.2",
+  "Input": [
+    "./asp/instances/bike/bike-1.lp","./asp/bike-encoding.lp"
+  ],
+  "Call": [
+    {
+      "Witnesses": [
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"c1\")", "ooasp_isa(\"c1\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"c1\",\"Saddle\",(\"Saddle\",1))", "ooasp_isa(\"c1\",\"WheelFront\",(\"WheelFront\",1))", "ooasp_isa(\"c1\",\"WheelBack\",(\"WheelBack\",1))", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelFront\",1),20)", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelBack\",1),20)", "ooasp_attribute_value(\"c1\",\"child_model\",(\"Frame\",1),\"FALSE\")", "ooasp_attribute_value(\"c1\",\"gears\",(\"Frame\",1),\"Hub\")", "ooasp_associated(\"c1\",\"Frame_wheel_front\",(\"Frame\",1),(\"WheelFront\",1))", "ooasp_associated(\"c1\",\"Frame_wheel_back\",(\"Frame\",1),(\"WheelBack\",1))", "ooasp_associated(\"c1\",\"Frame_saddle\",(\"Frame\",1),(\"Saddle\",1))"
+          ],
+          "Costs": [
+            4
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"c1\")", "ooasp_isa(\"c1\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"c1\",\"Saddle\",(\"Saddle\",1))", "ooasp_isa(\"c1\",\"WheelFront\",(\"WheelFront\",1))", "ooasp_isa(\"c1\",\"WheelBack\",(\"WheelBack\",1))", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelFront\",1),14)", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelBack\",1),14)", "ooasp_attribute_value(\"c1\",\"child_model\",(\"Frame\",1),\"FALSE\")", "ooasp_attribute_value(\"c1\",\"gears\",(\"Frame\",1),\"Hub\")", "ooasp_associated(\"c1\",\"Frame_wheel_front\",(\"Frame\",1),(\"WheelFront\",1))", "ooasp_associated(\"c1\",\"Frame_wheel_back\",(\"Frame\",1),(\"WheelBack\",1))", "ooasp_associated(\"c1\",\"Frame_saddle\",(\"Frame\",1),(\"Saddle\",1))"
+          ],
+          "Costs": [
+            4
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"c1\")", "ooasp_isa(\"c1\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"c1\",\"Saddle\",(\"Saddle\",1))", "ooasp_isa(\"c1\",\"WheelFront\",(\"WheelFront\",1))", "ooasp_isa(\"c1\",\"WheelBack\",(\"WheelBack\",1))", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelFront\",1),16)", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelBack\",1),16)", "ooasp_attribute_value(\"c1\",\"child_model\",(\"Frame\",1),\"FALSE\")", "ooasp_attribute_value(\"c1\",\"gears\",(\"Frame\",1),\"Hub\")", "ooasp_associated(\"c1\",\"Frame_wheel_front\",(\"Frame\",1),(\"WheelFront\",1))", "ooasp_associated(\"c1\",\"Frame_wheel_back\",(\"Frame\",1),(\"WheelBack\",1))", "ooasp_associated(\"c1\",\"Frame_saddle\",(\"Frame\",1),(\"Saddle\",1))"
+          ],
+          "Costs": [
+            4
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"c1\")", "ooasp_isa(\"c1\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"c1\",\"Saddle\",(\"Saddle\",1))", "ooasp_isa(\"c1\",\"WheelFront\",(\"WheelFront\",1))", "ooasp_isa(\"c1\",\"WheelBack\",(\"WheelBack\",1))", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelFront\",1),17)", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelBack\",1),17)", "ooasp_attribute_value(\"c1\",\"child_model\",(\"Frame\",1),\"FALSE\")", "ooasp_attribute_value(\"c1\",\"gears\",(\"Frame\",1),\"Hub\")", "ooasp_associated(\"c1\",\"Frame_wheel_front\",(\"Frame\",1),(\"WheelFront\",1))", "ooasp_associated(\"c1\",\"Frame_wheel_back\",(\"Frame\",1),(\"WheelBack\",1))", "ooasp_associated(\"c1\",\"Frame_saddle\",(\"Frame\",1),(\"Saddle\",1))"
+          ],
+          "Costs": [
+            4
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"c1\")", "ooasp_isa(\"c1\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"c1\",\"Saddle\",(\"Saddle\",1))", "ooasp_isa(\"c1\",\"WheelFront\",(\"WheelFront\",1))", "ooasp_isa(\"c1\",\"WheelBack\",(\"WheelBack\",1))", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelFront\",1),20)", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelBack\",1),20)", "ooasp_attribute_value(\"c1\",\"child_model\",(\"Frame\",1),\"FALSE\")", "ooasp_attribute_value(\"c1\",\"gears\",(\"Frame\",1),\"Hub\")", "ooasp_associated(\"c1\",\"Frame_wheel_front\",(\"Frame\",1),(\"WheelFront\",1))", "ooasp_associated(\"c1\",\"Frame_wheel_back\",(\"Frame\",1),(\"WheelBack\",1))", "ooasp_associated(\"c1\",\"Frame_saddle\",(\"Frame\",1),(\"Saddle\",1))"
+          ],
+          "Costs": [
+            4
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"c1\")", "ooasp_isa(\"c1\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"c1\",\"Saddle\",(\"Saddle\",1))", "ooasp_isa(\"c1\",\"WheelFront\",(\"WheelFront\",1))", "ooasp_isa(\"c1\",\"WheelBack\",(\"WheelBack\",1))", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelFront\",1),18)", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelBack\",1),18)", "ooasp_attribute_value(\"c1\",\"child_model\",(\"Frame\",1),\"FALSE\")", "ooasp_attribute_value(\"c1\",\"gears\",(\"Frame\",1),\"Hub\")", "ooasp_associated(\"c1\",\"Frame_wheel_front\",(\"Frame\",1),(\"WheelFront\",1))", "ooasp_associated(\"c1\",\"Frame_wheel_back\",(\"Frame\",1),(\"WheelBack\",1))", "ooasp_associated(\"c1\",\"Frame_saddle\",(\"Frame\",1),(\"Saddle\",1))"
+          ],
+          "Costs": [
+            4
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"c1\")", "ooasp_isa(\"c1\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"c1\",\"Saddle\",(\"Saddle\",1))", "ooasp_isa(\"c1\",\"WheelFront\",(\"WheelFront\",1))", "ooasp_isa(\"c1\",\"WheelBack\",(\"WheelBack\",1))", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelFront\",1),15)", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelBack\",1),15)", "ooasp_attribute_value(\"c1\",\"child_model\",(\"Frame\",1),\"FALSE\")", "ooasp_attribute_value(\"c1\",\"gears\",(\"Frame\",1),\"Hub\")", "ooasp_associated(\"c1\",\"Frame_wheel_front\",(\"Frame\",1),(\"WheelFront\",1))", "ooasp_associated(\"c1\",\"Frame_wheel_back\",(\"Frame\",1),(\"WheelBack\",1))", "ooasp_associated(\"c1\",\"Frame_saddle\",(\"Frame\",1),(\"Saddle\",1))"
+          ],
+          "Costs": [
+            4
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"c1\")", "ooasp_isa(\"c1\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"c1\",\"Saddle\",(\"Saddle\",1))", "ooasp_isa(\"c1\",\"WheelFront\",(\"WheelFront\",1))", "ooasp_isa(\"c1\",\"WheelBack\",(\"WheelBack\",1))", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelFront\",1),19)", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelBack\",1),19)", "ooasp_attribute_value(\"c1\",\"child_model\",(\"Frame\",1),\"FALSE\")", "ooasp_attribute_value(\"c1\",\"gears\",(\"Frame\",1),\"Hub\")", "ooasp_associated(\"c1\",\"Frame_wheel_front\",(\"Frame\",1),(\"WheelFront\",1))", "ooasp_associated(\"c1\",\"Frame_wheel_back\",(\"Frame\",1),(\"WheelBack\",1))", "ooasp_associated(\"c1\",\"Frame_saddle\",(\"Frame\",1),(\"Saddle\",1))"
+          ],
+          "Costs": [
+            4
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"c1\")", "ooasp_isa(\"c1\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"c1\",\"Saddle\",(\"Saddle\",1))", "ooasp_isa(\"c1\",\"WheelFront\",(\"WheelFront\",1))", "ooasp_isa(\"c1\",\"WheelBack\",(\"WheelBack\",1))", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelFront\",1),14)", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelBack\",1),14)", "ooasp_attribute_value(\"c1\",\"child_model\",(\"Frame\",1),\"FALSE\")", "ooasp_attribute_value(\"c1\",\"gears\",(\"Frame\",1),\"Derailleur\")", "ooasp_associated(\"c1\",\"Frame_wheel_front\",(\"Frame\",1),(\"WheelFront\",1))", "ooasp_associated(\"c1\",\"Frame_wheel_back\",(\"Frame\",1),(\"WheelBack\",1))", "ooasp_associated(\"c1\",\"Frame_saddle\",(\"Frame\",1),(\"Saddle\",1))"
+          ],
+          "Costs": [
+            4
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"c1\")", "ooasp_isa(\"c1\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"c1\",\"Saddle\",(\"Saddle\",1))", "ooasp_isa(\"c1\",\"WheelFront\",(\"WheelFront\",1))", "ooasp_isa(\"c1\",\"WheelBack\",(\"WheelBack\",1))", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelFront\",1),19)", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelBack\",1),19)", "ooasp_attribute_value(\"c1\",\"child_model\",(\"Frame\",1),\"FALSE\")", "ooasp_attribute_value(\"c1\",\"gears\",(\"Frame\",1),\"Derailleur\")", "ooasp_associated(\"c1\",\"Frame_wheel_front\",(\"Frame\",1),(\"WheelFront\",1))", "ooasp_associated(\"c1\",\"Frame_wheel_back\",(\"Frame\",1),(\"WheelBack\",1))", "ooasp_associated(\"c1\",\"Frame_saddle\",(\"Frame\",1),(\"Saddle\",1))"
+          ],
+          "Costs": [
+            4
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"c1\")", "ooasp_isa(\"c1\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"c1\",\"Saddle\",(\"Saddle\",1))", "ooasp_isa(\"c1\",\"WheelFront\",(\"WheelFront\",1))", "ooasp_isa(\"c1\",\"WheelBack\",(\"WheelBack\",1))", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelFront\",1),17)", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelBack\",1),17)", "ooasp_attribute_value(\"c1\",\"child_model\",(\"Frame\",1),\"FALSE\")", "ooasp_attribute_value(\"c1\",\"gears\",(\"Frame\",1),\"Derailleur\")", "ooasp_associated(\"c1\",\"Frame_wheel_front\",(\"Frame\",1),(\"WheelFront\",1))", "ooasp_associated(\"c1\",\"Frame_wheel_back\",(\"Frame\",1),(\"WheelBack\",1))", "ooasp_associated(\"c1\",\"Frame_saddle\",(\"Frame\",1),(\"Saddle\",1))"
+          ],
+          "Costs": [
+            4
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"c1\")", "ooasp_isa(\"c1\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"c1\",\"Saddle\",(\"Saddle\",1))", "ooasp_isa(\"c1\",\"WheelFront\",(\"WheelFront\",1))", "ooasp_isa(\"c1\",\"WheelBack\",(\"WheelBack\",1))", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelFront\",1),20)", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelBack\",1),20)", "ooasp_attribute_value(\"c1\",\"child_model\",(\"Frame\",1),\"FALSE\")", "ooasp_attribute_value(\"c1\",\"gears\",(\"Frame\",1),\"Derailleur\")", "ooasp_associated(\"c1\",\"Frame_wheel_front\",(\"Frame\",1),(\"WheelFront\",1))", "ooasp_associated(\"c1\",\"Frame_wheel_back\",(\"Frame\",1),(\"WheelBack\",1))", "ooasp_associated(\"c1\",\"Frame_saddle\",(\"Frame\",1),(\"Saddle\",1))"
+          ],
+          "Costs": [
+            4
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"c1\")", "ooasp_isa(\"c1\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"c1\",\"Saddle\",(\"Saddle\",1))", "ooasp_isa(\"c1\",\"WheelFront\",(\"WheelFront\",1))", "ooasp_isa(\"c1\",\"WheelBack\",(\"WheelBack\",1))", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelFront\",1),18)", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelBack\",1),18)", "ooasp_attribute_value(\"c1\",\"child_model\",(\"Frame\",1),\"FALSE\")", "ooasp_attribute_value(\"c1\",\"gears\",(\"Frame\",1),\"Derailleur\")", "ooasp_associated(\"c1\",\"Frame_wheel_front\",(\"Frame\",1),(\"WheelFront\",1))", "ooasp_associated(\"c1\",\"Frame_wheel_back\",(\"Frame\",1),(\"WheelBack\",1))", "ooasp_associated(\"c1\",\"Frame_saddle\",(\"Frame\",1),(\"Saddle\",1))"
+          ],
+          "Costs": [
+            4
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"c1\")", "ooasp_isa(\"c1\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"c1\",\"Saddle\",(\"Saddle\",1))", "ooasp_isa(\"c1\",\"WheelFront\",(\"WheelFront\",1))", "ooasp_isa(\"c1\",\"WheelBack\",(\"WheelBack\",1))", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelFront\",1),15)", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelBack\",1),15)", "ooasp_attribute_value(\"c1\",\"child_model\",(\"Frame\",1),\"FALSE\")", "ooasp_attribute_value(\"c1\",\"gears\",(\"Frame\",1),\"Derailleur\")", "ooasp_associated(\"c1\",\"Frame_wheel_front\",(\"Frame\",1),(\"WheelFront\",1))", "ooasp_associated(\"c1\",\"Frame_wheel_back\",(\"Frame\",1),(\"WheelBack\",1))", "ooasp_associated(\"c1\",\"Frame_saddle\",(\"Frame\",1),(\"Saddle\",1))"
+          ],
+          "Costs": [
+            4
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"c1\")", "ooasp_isa(\"c1\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"c1\",\"Saddle\",(\"Saddle\",1))", "ooasp_isa(\"c1\",\"WheelFront\",(\"WheelFront\",1))", "ooasp_isa(\"c1\",\"WheelBack\",(\"WheelBack\",1))", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelFront\",1),16)", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelBack\",1),16)", "ooasp_attribute_value(\"c1\",\"child_model\",(\"Frame\",1),\"FALSE\")", "ooasp_attribute_value(\"c1\",\"gears\",(\"Frame\",1),\"Derailleur\")", "ooasp_associated(\"c1\",\"Frame_wheel_front\",(\"Frame\",1),(\"WheelFront\",1))", "ooasp_associated(\"c1\",\"Frame_wheel_back\",(\"Frame\",1),(\"WheelBack\",1))", "ooasp_associated(\"c1\",\"Frame_saddle\",(\"Frame\",1),(\"Saddle\",1))"
+          ],
+          "Costs": [
+            4
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"c1\")", "ooasp_isa(\"c1\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"c1\",\"Saddle\",(\"Saddle\",1))", "ooasp_isa(\"c1\",\"WheelFront\",(\"WheelFront\",1))", "ooasp_isa(\"c1\",\"WheelBack\",(\"WheelBack\",1))", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelFront\",1),14)", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelBack\",1),14)", "ooasp_attribute_value(\"c1\",\"child_model\",(\"Frame\",1),\"TRUE\")", "ooasp_attribute_value(\"c1\",\"gears\",(\"Frame\",1),\"Derailleur\")", "ooasp_associated(\"c1\",\"Frame_wheel_front\",(\"Frame\",1),(\"WheelFront\",1))", "ooasp_associated(\"c1\",\"Frame_wheel_back\",(\"Frame\",1),(\"WheelBack\",1))", "ooasp_associated(\"c1\",\"Frame_saddle\",(\"Frame\",1),(\"Saddle\",1))"
+          ],
+          "Costs": [
+            4
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"c1\")", "ooasp_isa(\"c1\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"c1\",\"Saddle\",(\"Saddle\",1))", "ooasp_isa(\"c1\",\"WheelFront\",(\"WheelFront\",1))", "ooasp_isa(\"c1\",\"WheelBack\",(\"WheelBack\",1))", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelFront\",1),15)", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelBack\",1),15)", "ooasp_attribute_value(\"c1\",\"child_model\",(\"Frame\",1),\"TRUE\")", "ooasp_attribute_value(\"c1\",\"gears\",(\"Frame\",1),\"Derailleur\")", "ooasp_associated(\"c1\",\"Frame_wheel_front\",(\"Frame\",1),(\"WheelFront\",1))", "ooasp_associated(\"c1\",\"Frame_wheel_back\",(\"Frame\",1),(\"WheelBack\",1))", "ooasp_associated(\"c1\",\"Frame_saddle\",(\"Frame\",1),(\"Saddle\",1))"
+          ],
+          "Costs": [
+            4
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"c1\")", "ooasp_isa(\"c1\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"c1\",\"Saddle\",(\"Saddle\",1))", "ooasp_isa(\"c1\",\"WheelFront\",(\"WheelFront\",1))", "ooasp_isa(\"c1\",\"WheelBack\",(\"WheelBack\",1))", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelFront\",1),16)", "ooasp_attribute_value(\"c1\",\"wheel_size\",(\"WheelBack\",1),16)", "ooasp_attribute_value(\"c1\",\"child_model\",(\"Frame\",1),\"TRUE\")", "ooasp_attribute_value(\"c1\",\"gears\",(\"Frame\",1),\"Derailleur\")", "ooasp_associated(\"c1\",\"Frame_wheel_front\",(\"Frame\",1),(\"WheelFront\",1))", "ooasp_associated(\"c1\",\"Frame_wheel_back\",(\"Frame\",1),(\"WheelBack\",1))", "ooasp_associated(\"c1\",\"Frame_saddle\",(\"Frame\",1),(\"Saddle\",1))"
+          ],
+          "Costs": [
+            4
+          ]
+        }
+      ]
+    }
+  ],
+  "Result": "OPTIMUM FOUND",
+  "Models": {
+    "Number": 18,
+    "More": "no",
+    "Optimum": "yes",
+    "Optimal": 17,
+    "Costs": [
+      4
+    ]
+  },
+  "Calls": 1,
+  "Time": {
+    "Total": 0.570,
+    "Solve": 0.002,
+    "Model": 0.000,
+    "Unsat": 0.000,
+    "CPU": 0.565
+  }
+}

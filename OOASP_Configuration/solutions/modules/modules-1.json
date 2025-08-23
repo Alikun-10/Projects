@@ -1,0 +1,54 @@
+{
+  "Solver": "clingo version 5.7.2",
+  "Input": [
+    "./asp/instances/modules/paper.lp","./asp/modules-encoding.lp"
+  ],
+  "Call": [
+    {
+      "Witnesses": [
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"c1\")", "ooasp_isa(\"c1\",\"ElementA\",(\"ElementA\",10))", "ooasp_isa(\"c1\",\"ElementA\",(\"ElementA\",11))", "ooasp_isa(\"c1\",\"ElementA\",(\"ElementA\",12))", "ooasp_isa(\"c1\",\"ElementB\",(\"ElementB\",13))", "ooasp_isa(\"c1\",\"ElementB\",(\"ElementB\",14))", "ooasp_isa(\"c1\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"c1\",\"Frame\",(\"Frame\",2))", "ooasp_isa(\"c1\",\"ModuleA\",(\"ModuleA\",1))", "ooasp_isa(\"c1\",\"ModuleA\",(\"ModuleA\",2))", "ooasp_isa(\"c1\",\"ModuleA\",(\"ModuleA\",3))", "ooasp_isa(\"c1\",\"ModuleB\",(\"ModuleB\",1))", "ooasp_isa(\"c1\",\"ModuleB\",(\"ModuleB\",2))", "ooasp_attribute_value(\"c1\",\"position\",(\"ModuleA\",1),1)", "ooasp_attribute_value(\"c1\",\"position\",(\"ModuleA\",2),3)", "ooasp_attribute_value(\"c1\",\"position\",(\"ModuleA\",3),5)", "ooasp_attribute_value(\"c1\",\"position\",(\"ModuleB\",1),2)", "ooasp_attribute_value(\"c1\",\"position\",(\"ModuleB\",2),4)", "ooasp_associated(\"c1\",\"ElementA_moduleA\",(\"ElementA\",10),(\"ModuleA\",1))", "ooasp_associated(\"c1\",\"ElementA_moduleA\",(\"ElementA\",11),(\"ModuleA\",2))", "ooasp_associated(\"c1\",\"ElementA_moduleA\",(\"ElementA\",12),(\"ModuleA\",3))", "ooasp_associated(\"c1\",\"ElementB_moduleB\",(\"ElementB\",13),(\"ModuleB\",1))", "ooasp_associated(\"c1\",\"ElementB_moduleB\",(\"ElementB\",14),(\"ModuleB\",2))", "ooasp_associated(\"c1\",\"Frame_modules\",(\"Frame\",2),(\"ModuleA\",1))", "ooasp_associated(\"c1\",\"Frame_modules\",(\"Frame\",2),(\"ModuleA\",2))", "ooasp_associated(\"c1\",\"Frame_modules\",(\"Frame\",2),(\"ModuleA\",3))", "ooasp_associated(\"c1\",\"Frame_modules\",(\"Frame\",2),(\"ModuleB\",1))", "ooasp_associated(\"c1\",\"Frame_modules\",(\"Frame\",2),(\"ModuleB\",2))", "ooasp_associated(\"c1\",\"Element_module\",(\"ElementB\",13),(\"ModuleB\",1))", "ooasp_associated(\"c1\",\"Element_module\",(\"ElementB\",14),(\"ModuleB\",2))", "ooasp_associated(\"c1\",\"Element_module\",(\"ElementA\",10),(\"ModuleA\",1))", "ooasp_associated(\"c1\",\"Element_module\",(\"ElementA\",11),(\"ModuleA\",2))", "ooasp_associated(\"c1\",\"Element_module\",(\"ElementA\",12),(\"ModuleA\",3))"
+          ],
+          "Costs": [
+            12
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"c1\")", "ooasp_isa(\"c1\",\"ElementA\",(\"ElementA\",10))", "ooasp_isa(\"c1\",\"ElementA\",(\"ElementA\",11))", "ooasp_isa(\"c1\",\"ElementA\",(\"ElementA\",12))", "ooasp_isa(\"c1\",\"ElementB\",(\"ElementB\",13))", "ooasp_isa(\"c1\",\"ElementB\",(\"ElementB\",14))", "ooasp_isa(\"c1\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"c1\",\"ModuleA\",(\"ModuleA\",1))", "ooasp_isa(\"c1\",\"ModuleA\",(\"ModuleA\",2))", "ooasp_isa(\"c1\",\"ModuleA\",(\"ModuleA\",3))", "ooasp_isa(\"c1\",\"ModuleB\",(\"ModuleB\",1))", "ooasp_isa(\"c1\",\"ModuleB\",(\"ModuleB\",2))", "ooasp_attribute_value(\"c1\",\"position\",(\"ModuleA\",1),1)", "ooasp_attribute_value(\"c1\",\"position\",(\"ModuleA\",2),3)", "ooasp_attribute_value(\"c1\",\"position\",(\"ModuleA\",3),5)", "ooasp_attribute_value(\"c1\",\"position\",(\"ModuleB\",1),2)", "ooasp_attribute_value(\"c1\",\"position\",(\"ModuleB\",2),4)", "ooasp_associated(\"c1\",\"ElementA_moduleA\",(\"ElementA\",10),(\"ModuleA\",1))", "ooasp_associated(\"c1\",\"ElementA_moduleA\",(\"ElementA\",11),(\"ModuleA\",2))", "ooasp_associated(\"c1\",\"ElementA_moduleA\",(\"ElementA\",12),(\"ModuleA\",3))", "ooasp_associated(\"c1\",\"ElementB_moduleB\",(\"ElementB\",13),(\"ModuleB\",1))", "ooasp_associated(\"c1\",\"ElementB_moduleB\",(\"ElementB\",14),(\"ModuleB\",2))", "ooasp_associated(\"c1\",\"Frame_modules\",(\"Frame\",1),(\"ModuleA\",1))", "ooasp_associated(\"c1\",\"Frame_modules\",(\"Frame\",1),(\"ModuleA\",2))", "ooasp_associated(\"c1\",\"Frame_modules\",(\"Frame\",1),(\"ModuleA\",3))", "ooasp_associated(\"c1\",\"Frame_modules\",(\"Frame\",1),(\"ModuleB\",1))", "ooasp_associated(\"c1\",\"Frame_modules\",(\"Frame\",1),(\"ModuleB\",2))", "ooasp_associated(\"c1\",\"Element_module\",(\"ElementB\",13),(\"ModuleB\",1))", "ooasp_associated(\"c1\",\"Element_module\",(\"ElementB\",14),(\"ModuleB\",2))", "ooasp_associated(\"c1\",\"Element_module\",(\"ElementA\",10),(\"ModuleA\",1))", "ooasp_associated(\"c1\",\"Element_module\",(\"ElementA\",11),(\"ModuleA\",2))", "ooasp_associated(\"c1\",\"Element_module\",(\"ElementA\",12),(\"ModuleA\",3))"
+          ],
+          "Costs": [
+            11
+          ]
+        },
+        {
+          "Value": [
+            "ooasp_instantiation(\"v1\",\"c1\")", "ooasp_isa(\"c1\",\"ElementA\",(\"ElementA\",10))", "ooasp_isa(\"c1\",\"ElementA\",(\"ElementA\",11))", "ooasp_isa(\"c1\",\"ElementA\",(\"ElementA\",12))", "ooasp_isa(\"c1\",\"ElementB\",(\"ElementB\",13))", "ooasp_isa(\"c1\",\"ElementB\",(\"ElementB\",14))", "ooasp_isa(\"c1\",\"Frame\",(\"Frame\",1))", "ooasp_isa(\"c1\",\"ModuleA\",(\"ModuleA\",1))", "ooasp_isa(\"c1\",\"ModuleA\",(\"ModuleA\",2))", "ooasp_isa(\"c1\",\"ModuleA\",(\"ModuleA\",3))", "ooasp_isa(\"c1\",\"ModuleB\",(\"ModuleB\",1))", "ooasp_isa(\"c1\",\"ModuleB\",(\"ModuleB\",2))", "ooasp_attribute_value(\"c1\",\"position\",(\"ModuleA\",1),1)", "ooasp_attribute_value(\"c1\",\"position\",(\"ModuleA\",2),3)", "ooasp_attribute_value(\"c1\",\"position\",(\"ModuleA\",3),5)", "ooasp_attribute_value(\"c1\",\"position\",(\"ModuleB\",1),2)", "ooasp_attribute_value(\"c1\",\"position\",(\"ModuleB\",2),4)", "ooasp_associated(\"c1\",\"ElementA_moduleA\",(\"ElementA\",10),(\"ModuleA\",1))", "ooasp_associated(\"c1\",\"ElementA_moduleA\",(\"ElementA\",11),(\"ModuleA\",2))", "ooasp_associated(\"c1\",\"ElementA_moduleA\",(\"ElementA\",12),(\"ModuleA\",3))", "ooasp_associated(\"c1\",\"ElementB_moduleB\",(\"ElementB\",13),(\"ModuleB\",1))", "ooasp_associated(\"c1\",\"ElementB_moduleB\",(\"ElementB\",14),(\"ModuleB\",2))", "ooasp_associated(\"c1\",\"Frame_modules\",(\"Frame\",1),(\"ModuleA\",1))", "ooasp_associated(\"c1\",\"Frame_modules\",(\"Frame\",1),(\"ModuleA\",2))", "ooasp_associated(\"c1\",\"Frame_modules\",(\"Frame\",1),(\"ModuleA\",3))", "ooasp_associated(\"c1\",\"Frame_modules\",(\"Frame\",1),(\"ModuleB\",1))", "ooasp_associated(\"c1\",\"Frame_modules\",(\"Frame\",1),(\"ModuleB\",2))", "ooasp_associated(\"c1\",\"Element_module\",(\"ElementB\",13),(\"ModuleB\",1))", "ooasp_associated(\"c1\",\"Element_module\",(\"ElementB\",14),(\"ModuleB\",2))", "ooasp_associated(\"c1\",\"Element_module\",(\"ElementA\",10),(\"ModuleA\",1))", "ooasp_associated(\"c1\",\"Element_module\",(\"ElementA\",11),(\"ModuleA\",2))", "ooasp_associated(\"c1\",\"Element_module\",(\"ElementA\",12),(\"ModuleA\",3))"
+          ],
+          "Costs": [
+            11
+          ]
+        }
+      ]
+    }
+  ],
+  "Result": "OPTIMUM FOUND",
+  "Models": {
+    "Number": 3,
+    "More": "no",
+    "Optimum": "yes",
+    "Optimal": 1,
+    "Costs": [
+      11
+    ]
+  },
+  "Calls": 1,
+  "Time": {
+    "Total": 0.492,
+    "Solve": 0.003,
+    "Model": 0.001,
+    "Unsat": 0.000,
+    "CPU": 0.488
+  }
+}
