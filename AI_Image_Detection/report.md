@@ -1,6 +1,5 @@
 # AMLS SoSe 2026 - AI Image Detection
 
-**Team members:** Hana Halitim, Ali Yassine
 **Submission date:** July 2026
 
 ## 1. Dataset Exploration and Cleaning (Task 1.1)
