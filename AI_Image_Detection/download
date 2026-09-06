@@ -1,0 +1,4 @@
+solution/data/
+solution/artifacts/
+__pycache__/
+*.py[cod]
