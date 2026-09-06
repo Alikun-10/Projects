@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OverEats Identity Access</title>
+  <style>
+    :root {
+      --bg: #0a0d0b;
+      --bg2: #0f1510;
+      --panel: #131b15;
+      --panel2: #17211a;
+      --panel3: #0f1411;
+      --line: #2b3c30;
+      --line-strong: #536c57;
+      --text: #e8efe7;
+      --muted: #97a89a;
+      --green: #7ebc59;
+      --green-2: #9dd979;
+      --amber: #d3ab51;
+      --red: #d06f63;
+      --blue: #7ca6c8;
+      --glow: rgba(158, 217, 121, 0.18);
+      --shadow: 0 10px 30px rgba(0,0,0,.28);
+      --radius: 14px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      --sans: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(126,188,89,.08), transparent 32%),
+        radial-gradient(circle at top right, rgba(211,171,81,.05), transparent 25%),
+        linear-gradient(180deg, #09100b 0%, #0a0d0b 100%);
+      color: var(--text);
+      font-family: var(--sans);
+      min-height: 100vh;
+    }
+
+    .shell {
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      min-height: 100vh;
+    }
+
+    aside {
+      border-right: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(16,24,18,.98), rgba(11,15,12,.98));
+      padding: 22px 18px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow: auto;
+    }
+
+    .brand {
+      margin-bottom: 18px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(126,188,89,.08), rgba(126,188,89,.02));
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.02);
+    }
+
+    .brand-top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .seal {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 21px;
+      background: radial-gradient(circle at 30% 30%, #b9df86, #466c34);
+      color: #091008;
+      box-shadow: 0 0 0 3px rgba(126,188,89,.15);
+    }
+
+    .eyebrow, .meta, .tiny, code, pre, .mono {
+      font-family: var(--mono);
+    }
+
+    .eyebrow {
+      color: var(--amber);
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .brand h1 {
+      margin: 2px 0 0;
+      font-size: 21px;
+      line-height: 1.1;
+    }
+
+    .brand p, .meta, .tiny {
+      color: var(--muted);
+      margin: 6px 0 0;
+    }
+
+    nav {
+      margin: 18px 0;
+      display: grid;
+      gap: 8px;
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.015);
+      border-radius: 11px;
+      padding: 11px 12px;
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a:hover {
+      border-color: var(--line-strong);
+      background: rgba(126,188,89,.05);
+    }
+
+    .side-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 12px;
+      background: rgba(255,255,255,.02);
+      margin-top: 14px;
+    }
+
+    .status-list {
+      display: grid;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .kv {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 13px;
+      border-bottom: 1px dashed rgba(151,168,154,.12);
+      padding-bottom: 6px;
+    }
+
+    .kv:last-child { border-bottom: 0; padding-bottom: 0; }
+
+    .main {
+      padding: 20px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .topbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .chips, .actions, .quick-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .chip {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color: var(--muted);
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 12px;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      font-family: var(--mono);
+    }
+
+    .chip.good { color: var(--green-2); }
+    .chip.warn { color: var(--amber); }
+    .chip.bad { color: var(--red); }
+    .chip.blue { color: var(--blue); }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.45fr .9fr;
+      gap: 18px;
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(180deg, rgba(22,30,24,.96), rgba(15,20,17,.96));
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .panel-head {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(126,188,89,.08), rgba(126,188,89,.02));
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .panel-head h2, .panel-head h3 {
+      margin: 0;
+      font-size: 15px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .panel-body { padding: 16px; }
+
+    .briefing h1 {
+      margin: 0 0 10px;
+      font-size: 34px;
+      line-height: 1.05;
+      max-width: 14ch;
+    }
+
+    .briefing p {
+      margin: 0 0 10px;
+      color: var(--muted);
+      line-height: 1.55;
+      max-width: 70ch;
+    }
+
+    .classification {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(211,171,81,.45);
+      color: var(--amber);
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      margin-bottom: 12px;
+      font-family: var(--mono);
+      background: rgba(211,171,81,.08);
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px;
+      background: rgba(0,0,0,.14);
+    }
+
+    .metric .label {
+      color: var(--muted);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-family: var(--mono);
+    }
+
+    .metric .value {
+      margin-top: 8px;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .metric .sub {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .dial-card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .dial {
+      --angle: 110deg;
+      width: min(260px, 100%);
+      aspect-ratio: 1;
+      margin: 8px auto 16px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 50% 50%, #121813 0 51%, transparent 52%),
+        conic-gradient(from -120deg, #466c34 0 30%, #7ebc59 30% 58%, #d3ab51 58% 80%, #a35d4f 80% 100%);
+      position: relative;
+      box-shadow: inset 0 0 0 16px rgba(0,0,0,.16), 0 0 20px rgba(126,188,89,.1);
+    }
+
+    .dial::before {
+      content: "";
+      position: absolute;
+      inset: 17%;
+      border-radius: 50%;
+      border: 1px solid rgba(151,168,154,.18);
+    }
+
+    .dial::after {
+      content: "";
+      position: absolute;
+      left: 50%; top: 50%;
+      width: 42%; height: 4px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(255,255,255,0), var(--text));
+      transform-origin: left center;
+      transform: rotate(var(--angle));
+      box-shadow: 0 0 14px rgba(255,255,255,.15);
+    }
+
+    .dial-center {
+      position: absolute;
+      inset: 31%;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: radial-gradient(circle, #1a241d, #0d120e);
+      border: 1px solid var(--line);
+      text-align: center;
+      padding: 14px;
+    }
+
+    .dial-center .big {
+      font-size: 34px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .dial-center .small {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-family: var(--mono);
+    }
+
+    .meter-label {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      margin-top: 10px;
+      font-size: 12px;
+      color: var(--muted);
+      font-family: var(--mono);
+    }
+
+    .ops-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.2fr) 360px;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .stack {
+      display: grid;
+      gap: 18px;
+    }
+
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 12px;
+    }
+
+    .section-title h3 { margin: 0; font-size: 15px; text-transform: uppercase; letter-spacing: .05em; }
+    .section-title .hint { color: var(--muted); font-size: 13px; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+
+    label {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin: 0 0 7px;
+      font-family: var(--mono);
+    }
+
+    input, select, textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: rgba(4,7,5,.58);
+      color: var(--text);
+      padding: 11px 12px;
+      font: inherit;
+      outline: none;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--green);
+      box-shadow: 0 0 0 4px rgba(126,188,89,.08);
+    }
+
+    textarea { min-height: 88px; resize: vertical; }
+
+    button {
+      appearance: none;
+      border: 1px solid var(--green);
+      background: linear-gradient(180deg, rgba(126,188,89,.95), rgba(90,140,60,.95));
+      color: #0d120e;
+      border-radius: 10px;
+      padding: 10px 12px;
+      font: 700 13px/1 var(--sans);
+      cursor: pointer;
+      box-shadow: 0 6px 14px rgba(126,188,89,.16);
+    }
+
+    button:hover { filter: brightness(1.06); }
+
+    button.secondary {
+      background: rgba(255,255,255,.02);
+      color: var(--text);
+      border-color: var(--line-strong);
+      box-shadow: none;
+    }
+
+    button.amber { background: linear-gradient(180deg, #d3ab51, #b18c3d); border-color: #d3ab51; }
+    button.blue { background: linear-gradient(180deg, #7ca6c8, #5f86a6); border-color: #7ca6c8; }
+    button.red { background: linear-gradient(180deg, #d06f63, #a85a4f); border-color: #d06f63; }
+
+    .form-card {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(255,255,255,.018);
+      padding: 14px;
+    }
+
+    .subnote {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+      margin: 0 0 12px;
+    }
+
+    .console {
+      background: linear-gradient(180deg, rgba(5,8,6,.95), rgba(8,11,9,.95));
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      min-height: 360px;
+      max-height: 680px;
+      overflow: auto;
+      padding: 14px;
+      white-space: pre-wrap;
+      word-break: break-word;
+      color: #d5ded3;
+      font-size: 12.5px;
+      line-height: 1.55;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.01);
+    }
+
+    .feed {
+      display: grid;
+      gap: 10px;
+      max-height: 420px;
+      overflow: auto;
+      padding-right: 4px;
+    }
+
+    .event {
+      border: 1px solid rgba(151,168,154,.14);
+      background: rgba(255,255,255,.015);
+      border-radius: 12px;
+      padding: 10px 12px;
+    }
+
+    .event-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 6px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .event strong { font-size: 13px; color: var(--text); }
+
+    .id-grid {
+      display: grid;
+      gap: 10px;
+    }
+
+    .id-box {
+      border: 1px solid rgba(151,168,154,.14);
+      border-radius: 12px;
+      padding: 10px 12px;
+      background: rgba(0,0,0,.12);
+    }
+
+    .id-box .name {
+      color: var(--muted);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-family: var(--mono);
+    }
+
+    .id-box .num {
+      margin-top: 6px;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .footer-note {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .hidden { display: none !important; }
+
+    @media (max-width: 1450px) {
+      .ops-grid { grid-template-columns: 1fr 1fr; }
+      .ops-grid > .right-rail { grid-column: 1 / -1; }
+    }
+
+    @media (max-width: 1150px) {
+      .hero { grid-template-columns: 1fr; }
+      .metrics { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .grid3 { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 980px) {
+      .shell { grid-template-columns: 1fr; }
+      aside {
+        position: static;
+        height: auto;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .ops-grid { grid-template-columns: 1fr; }
+      .grid2 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <aside>
+      <div class="brand">
+        <div class="brand-top">
+          <div class="seal">🍕</div>
+          <div>
+            <div class="eyebrow">OverEats Strategic Command</div>
+            <h1>Identity Access</h1>
+          </div>
+        </div>
+        <p>Authenticate operators before issuing restaurant, order, delivery, note, or LiveTrack commands.</p>
+      </div>
+      <nav>
+        <a href="/">Operations Dashboard <span>01</span></a>
+        <a href="/login">Identity Access <span>02</span></a>
+        <a href="/howto">Field Manual <span>03</span></a>
+      </nav>
+      <div class="side-card">
+        <div class="eyebrow">Current Session</div>
+        <div id="sessionPill" class="meta" style="margin-top:10px;">No authenticated operator.</div>
+      </div>
+      <div class="side-card footer-note">
+        <strong style="display:block;color:var(--amber);margin-bottom:8px;">Ops Note</strong>
+        Profiles are stored in browser local storage. The active profile is shared with the dashboard page.
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <div class="chips">
+          <div class="chip warn">Classification: Meal-Sensitive</div>
+          <div class="chip blue">Access Control Station</div>
+          <div class="chip good" id="authChip">Operator: Unauthenticated</div>
+        </div>
+        <div class="quick-actions">
+          <button class="secondary" onclick="location.href='/'">Back to Dashboard</button>
+          <button class="secondary" onclick="location.href='/howto'">Field Manual</button>
+          <button class="red" onclick="logout()">Log Out</button>
+        </div>
+      </div>
+
+      <section class="hero">
+        <div class="panel briefing">
+          <div class="panel-body">
+            <div class="classification">Identity Operations</div>
+            <h1>Operator Authentication Desk</h1>
+            <p>Create or activate operators before using the command dashboard. Each role unlocks different operational permissions.</p>
+            <p>Use a restaurant operator to deploy restaurants and menus, a customer operator to place orders and notes, and a driver operator to inspect active deliveries.</p>
+          </div>
+        </div>
+        <div class="panel dial-card">
+          <div class="panel-head"><h2>Role Matrix</h2><div class="chip">Access Rules</div></div>
+          <div class="panel-body">
+            <div class="status-list">
+              <div class="kv"><span>Customer</span><strong>Orders / Notes</strong></div>
+              <div class="kv"><span>Restaurant</span><strong>Menus / Deliveries</strong></div>
+              <div class="kv"><span>Driver</span><strong>Active Runs</strong></div>
+            </div>
+            <p class="subnote" style="margin-top:14px;">LiveTrack actions require the active operator password because the browser bridge performs a LiveTrack AUTH frame.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="ops-grid">
+        <div class="stack">
+          <div class="panel" id="identity">
+            <div class="panel-head"><h3>Identity Operations</h3><div class="chip blue">Auth / Sessions</div></div>
+            <div class="panel-body">
+              <p class="subnote">Create or activate operators. Passwords are kept only in browser storage so LiveTrack bridge actions can authenticate on your behalf.</p>
+              <div class="form-card">
+                <div class="grid2">
+                  <div>
+                    <label>Username</label>
+                    <input id="authUsername" value="" placeholder="ops_auto_customer" />
+                  </div>
+                  <div>
+                    <label>Password</label>
+                    <input id="authPassword" value="pass" type="password" />
+                  </div>
+                </div>
+                <div style="margin-top:12px;">
+                  <label>Role</label>
+                  <select id="authRole">
+                    <option value="customer">customer</option>
+                    <option value="restaurant">restaurant</option>
+                    <option value="driver">driver</option>
+                  </select>
+                </div>
+                <div class="actions" style="margin-top:14px;">
+                  <button onclick="register()">Register Operator</button>
+                  <button class="secondary" onclick="login()">Authenticate</button>
+                  <button class="secondary" onclick="suggestUsername()">Generate Unique Handle</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stack">
+          <div class="panel">
+            <div class="panel-head"><h3>Saved Operator Profiles</h3><div class="chip" id="profileCount">0 profiles</div></div>
+            <div class="panel-body">
+              <div class="actions" id="accounts"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stack right-rail">
+          <div class="panel" id="console">
+            <div class="panel-head"><h3>Mission Console</h3><div class="chip">Auth Output</div></div>
+            <div class="panel-body">
+              <pre id="log" class="console">Ready. Awaiting identity operation.</pre>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const API = '/api';
+    const $ = (id) => document.getElementById(id);
+    const pretty = (x) => typeof x === 'string' ? x : JSON.stringify(x, null, 2);
+    let state = JSON.parse(localStorage.getItem('overeats_gui_state') || '{"accounts":{},"current":null,"last":{},"events":[],"health":"unknown"}');
+
+    function normalizeState() {
+      state.accounts ||= {};
+      state.current ||= null;
+      state.last ||= {};
+      state.events ||= [];
+      state.health ||= 'unknown';
+    }
+
+    function saveState() {
+      normalizeState();
+      localStorage.setItem('overeats_gui_state', JSON.stringify(state));
+      renderState();
+    }
+
+    function escapeHtml(s) {
+      return String(s ?? '').replace(/[&<>"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
+    }
+
+    function nowLabel() {
+      return new Date().toLocaleTimeString([], {hour:'2-digit', minute:'2-digit', second:'2-digit'});
+    }
+
+    function pushEvent(title, data, tone = 'neutral') {
+      normalizeState();
+      const preview = typeof data === 'string' ? data : JSON.stringify(data);
+      state.events.unshift({ title, preview: preview.slice(0, 180), time: nowLabel(), tone });
+      state.events = state.events.slice(0, 24);
+      saveState();
+    }
+
+    function renderAccounts() {
+      const cur = state.current;
+      const keys = Object.keys(state.accounts || {});
+      $('profileCount').textContent = `${keys.length} profile${keys.length === 1 ? '' : 's'}`;
+      $('accounts').innerHTML = keys.length ? keys.map(key => {
+        const a = state.accounts[key];
+        const active = cur && cur.username === a.username ? ' style="outline:1px solid rgba(126,188,89,.55)"' : '';
+        return `<button class="secondary"${active} onclick="switchAccount('${key.replace(/'/g, "\'")}')">${escapeHtml(a.role)} - ${escapeHtml(a.username)} - #${a.user_id}</button>`;
+      }).join('') : '<span class="tiny">No saved profiles yet.</span>';
+    }
+
+    function renderSession() {
+      const cur = state.current;
+      $('sessionPill').innerHTML = cur
+        ? `Active operator <strong>${escapeHtml(cur.username)}</strong><br><span class="tiny">Role: ${escapeHtml(cur.role)} / User ID: ${cur.user_id}</span>`
+        : 'No authenticated operator.';
+      $('authChip').textContent = cur ? `Operator: ${cur.username}` : 'Operator: Unauthenticated';
+    }
+
+    function renderState() { normalizeState(); renderAccounts(); renderSession(); }
+
+    function log(title, data, tone = 'neutral') {
+      $('log').textContent = `# ${title}
+${pretty(data)}`;
+      pushEvent(title, data, tone);
+    }
+
+    async function api(path, opts = {}, tokenOverride = undefined) {
+      const headers = Object.assign({'Content-Type': 'application/json'}, opts.headers || {});
+      const token = tokenOverride !== undefined ? tokenOverride : state.current?.token;
+      if (token) headers.Authorization = `Bearer ${token}`;
+      const res = await fetch(API + path, Object.assign({}, opts, {headers}));
+      let data;
+      try { data = await res.json(); } catch { data = await res.text(); }
+      if (!res.ok) throw {status: res.status, data};
+      return data;
+    }
+
+    function saveAccount(account) {
+      state.accounts[`${account.role}:${account.username}`] = account;
+      state.current = account;
+      saveState();
+    }
+
+    function switchAccount(key) {
+      state.current = state.accounts[key];
+      saveState();
+      log('Switched operator profile', state.current, 'info');
+    }
+
+    function logout() {
+      state.current = null;
+      saveState();
+      log('Operator logged out', {}, 'info');
+    }
+
+    function suggestUsername() {
+      const role = $('authRole').value || 'customer';
+      const suffix = Date.now().toString(36).slice(-7);
+      $('authUsername').value = `ops_${suffix}_${role}`;
+      if (!$('authPassword').value) $('authPassword').value = 'pass';
+      pushEvent('Generated unique operator handle', {username: $('authUsername').value, role}, 'info');
+    }
+
+    async function register() {
+      let username = $('authUsername').value.trim();
+      const password = $('authPassword').value;
+      const role = $('authRole').value;
+      if (!username) { suggestUsername(); username = $('authUsername').value.trim(); }
+      try {
+        const data = await api('/register', { method: 'POST', body: JSON.stringify({username, password, role}) }, null);
+        const account = {username, password, role, user_id: data.user_id, token: data.token};
+        saveAccount(account);
+        log('Operator registered', account, 'success');
+      } catch (e) {
+        if (e?.status === 409) {
+          log('Operator registration failed: username already exists', {hint: 'Use Authenticate with the existing username/password, or generate a new handle.', attempted_username: username, server: e.data}, 'warning');
+        } else { log('Operator registration failed', e, 'error'); }
+      }
+    }
+
+    async function login() {
+      const username = $('authUsername').value.trim();
+      const password = $('authPassword').value;
+      try {
+        const data = await api('/login', { method: 'POST', body: JSON.stringify({username, password}) }, null);
+        const account = {username, password, role: data.role, user_id: data.user_id, token: data.token};
+        saveAccount(account);
+        log('Operator authenticated', account, 'success');
+      } catch (e) { log('Authentication failed', e, 'error'); }
+    }
+
+    normalizeState();
+    if (!$('authUsername').value.trim()) suggestUsername();
+    renderState();
+  </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+version: '3.8'
+
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile.nginx
+    ports:
+      - "5432:80"
+    depends_on:
+      - web
+    restart: unless-stopped
+    networks:
+      - overeats-net
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+    depends_on:
+      - postgres
+      - livetrack
+    environment:
+      - DATABASE_URL=postgresql://overeats:overeats_secret@postgres:5432/overeats
+      - INTERNAL_SECRET=SuperSecretInternalKey2026
+      - ENCRYPTION_KEY_FILE=/data/encryption_key
+      - FLASK_ENV=production
+      - LIVETRACK_HOST=livetrack
+      - LIVETRACK_PORT=9090
+    volumes:
+      - keydata:/data
+    restart: unless-stopped
+    networks:
+      - overeats-net
+    mem_limit: 2g
+    cpus: 1
+    
+  livetrack:
+    build:
+      context: .
+      dockerfile: Dockerfile.livetrack
+    depends_on:
+      - postgres
+    environment:
+      - DATABASE_URL=postgres://overeats:overeats_secret@postgres:5432/overeats?sslmode=disable
+      - DEBUG_MODE=false
+    restart: unless-stopped
+    networks:
+      - overeats-net
+    mem_limit: 2g
+    cpus: 1
+    
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_USER=overeats
+      - POSTGRES_PASSWORD=overeats_secret
+      - POSTGRES_DB=overeats
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    restart: unless-stopped
+    networks:
+      - overeats-net
+
+  cleanup:
+    image: postgres:15-alpine
+    depends_on:
+      - postgres
+    environment:
+      - PGHOST=postgres
+      - PGPORT=5432
+      - PGUSER=overeats
+      - PGPASSWORD=overeats_secret
+      - PGDATABASE=overeats
+    volumes:
+      - ./cleanup.sh:/cleanup.sh:ro
+    entrypoint: ["/bin/sh", "/cleanup.sh"]
+    restart: unless-stopped
+    networks:
+      - overeats-net
+
+volumes:
+  pgdata:
+  keydata:
+
+networks:
+  overeats-net:
+    driver: bridge
