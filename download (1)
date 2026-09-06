@@ -1,6 +1,0 @@
-data/
-artifacts/
-__pycache__/
-**/__pycache__/
-*.py[cod]
-.git/
